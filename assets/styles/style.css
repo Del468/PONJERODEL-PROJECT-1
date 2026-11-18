@@ -1,6 +1,7 @@
 /* =========================
    Personal Portfolio Website
    ========================= */
+
 :root {
   --bg: #0b1120;
   --panel: #121c30;
@@ -13,6 +14,55 @@
   --max-width: 1100px;
 }
 
+/* =========================
+   RGB ANIMATED BACKGROUND
+   ========================= */
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.7;
+  position: relative;
+  isolation: isolate;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: -50%;
+  z-index: -1;
+  pointer-events: none;
+
+  background: conic-gradient(
+    from 0deg,
+    #0e5ab1,
+    #620db8,
+    #00c6ff,
+    #971fdd,
+    #bcda17,
+    #ff0080
+  );
+
+  filter: blur(100px);
+  opacity: 0.18;
+  animation: rgb-spin 15s linear infinite;
+}
+
+@keyframes rgb-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================
+   Images
+   ========================= */
+
 .pic {
   width: 240px;
   height: 310px;
@@ -24,16 +74,23 @@
   height: 310px;
   border-radius: 20px;
 }
+
 .piccc {
   width: 352px;
   height: 310px;
   border-radius: 20px;
 }
+
 .pics {
   width: 352px;
   height: 310px;
   border-radius: 20px;
 }
+
+/* =========================
+   Reset
+   ========================= */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -44,22 +101,23 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  line-height: 1.7;
-}
-
 a {
   color: inherit;
   text-decoration: none;
 }
 
+/* =========================
+   Container
+   ========================= */
+
 .container {
   width: min(var(--max-width), calc(100% - 40px));
   margin-inline: auto;
 }
+
+/* =========================
+   Header & Navigation
+   ========================= */
 
 .site-header {
   position: sticky;
@@ -112,6 +170,10 @@ h1 span,
   border-radius: 999px;
 }
 
+/* =========================
+   Hero Section
+   ========================= */
+
 .hero {
   min-height: 590px;
   display: grid;
@@ -155,6 +217,10 @@ h1 span,
   margin-top: 30px;
 }
 
+/* =========================
+   Buttons
+   ========================= */
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -183,6 +249,10 @@ h1 span,
   border: 1px solid var(--border);
   color: var(--text);
 }
+
+/* =========================
+   Hero Artwork
+   ========================= */
 
 .hero-art {
   min-height: 390px;
@@ -237,6 +307,10 @@ h1 span,
   letter-spacing: .16em;
 }
 
+/* =========================
+   Floating Tags
+   ========================= */
+
 .floating-tag {
   position: absolute;
   z-index: 2;
@@ -266,6 +340,10 @@ h1 span,
   color: #a9f1d1;
 }
 
+/* =========================
+   Sections
+   ========================= */
+
 .section {
   padding-block: 85px;
 }
@@ -279,6 +357,10 @@ h1 span,
   letter-spacing: -.04em;
 }
 
+/* =========================
+   About
+   ========================= */
+
 .about-card {
   padding: 30px;
   background: var(--panel);
@@ -288,9 +370,13 @@ h1 span,
   max-width: 850px;
 }
 
-.about-card p+p {
+.about-card p + p {
   margin-top: 14px;
 }
+
+/* =========================
+   Skills & Projects Grid
+   ========================= */
 
 .skills-grid,
 .projects-grid {
@@ -318,6 +404,10 @@ h1 span,
   padding: 25px;
 }
 
+/* =========================
+   Skill Icons
+   ========================= */
+
 .skill-icon {
   width: 48px;
   height: 48px;
@@ -342,6 +432,10 @@ h1 span,
   color: var(--muted);
   font-size: .9rem;
 }
+
+/* =========================
+   Project Cards
+   ========================= */
 
 .project-preview {
   min-height: 180px;
@@ -378,6 +472,10 @@ h1 span,
   padding: 20px;
 }
 
+/* =========================
+   Project Chips
+   ========================= */
+
 .chips {
   display: flex;
   gap: 8px;
@@ -392,6 +490,10 @@ h1 span,
   font-size: .72rem;
 }
 
+/* =========================
+   Contact Section
+   ========================= */
+
 .contact-section {
   margin-top: 45px;
   background: linear-gradient(135deg, #12233b, #0d1729);
@@ -405,7 +507,7 @@ h1 span,
   letter-spacing: -.04em;
 }
 
-.contact-content>p:not(.eyebrow) {
+.contact-content > p:not(.eyebrow) {
   color: var(--muted);
   margin: 10px 0 25px;
 }
@@ -414,6 +516,10 @@ h1 span,
   font-size: .78rem;
   margin-top: 20px !important;
 }
+
+/* =========================
+   Footer
+   ========================= */
 
 .footer {
   min-height: 90px;
@@ -428,6 +534,10 @@ h1 span,
 .footer a {
   color: var(--accent-2);
 }
+
+/* =========================
+   Tablet Responsive
+   ========================= */
 
 @media (max-width: 800px) {
   .hero {
@@ -453,6 +563,10 @@ h1 span,
     grid-template-columns: 1fr 1fr;
   }
 }
+
+/* =========================
+   Mobile Responsive
+   ========================= */
 
 @media (max-width: 560px) {
   .navbar {
