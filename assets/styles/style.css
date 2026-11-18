@@ -620,15 +620,33 @@ h1 span,
     padding-block: 20px;
   }
   
-  .picss{
-    width: 240px;
-    height: 310px;
-    border-radius: 20px;
-  }
+}
 
-  .picss{
-    width: 240px;
-    height: 310px;
-    border-radius: 20px;
-  }
+/* =========================
+   GAMES SECTION IMAGE SPACING
+   ========================= */
+
+#games .skill-card {
+    padding: 15px;
+}
+
+#games .game-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin: 0 auto 15px;
+    border-radius: 10px;
+}
+
+/* Spacing ng title */
+#games .skill-card h3 {
+    margin-bottom: 8px;
+}
+
+/* Spacing ng description */
+#games .skill-card p {
+    margin-bottom: 5px;
+    line-height: 1.7;
 }
