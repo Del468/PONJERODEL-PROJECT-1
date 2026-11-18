@@ -24,7 +24,11 @@
   height: 310px;
   border-radius: 20px;
 }
-
+.piccc {
+  width: 352px;
+  height: 310px;
+  border-radius: 20px;
+}
 
 * {
   box-sizing: border-box;
