@@ -15,9 +15,16 @@
 
 .pic {
   width: 240px;
-  height: 230px;
+  height: 310px;
   border-radius: 20px;
 }
+
+.picc {
+  width: 352px;
+  height: 310px;
+  border-radius: 20px;
+}
+
 
 * {
   box-sizing: border-box;
